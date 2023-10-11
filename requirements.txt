@@ -1,0 +1,4 @@
+waveletai
+scipy
+pillow
+scikit-learn

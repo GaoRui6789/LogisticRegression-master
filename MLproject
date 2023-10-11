@@ -1,0 +1,17 @@
+name: sklearn_logistic_example
+
+docker_env:
+  args:
+    cpus: 3
+  image: harbor.xiaobodata.com/wai/cpu:py37
+
+entry_points:
+  main:
+    command: python train_model.py  -cp={c_param} -td={training_data}
+    parameters:
+      training_data:
+        type: url
+        default: ""
+      c_param:
+        type: float
+        default: 0.95
